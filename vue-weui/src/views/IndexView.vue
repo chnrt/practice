@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home" transition="app">
     <div class="hd">
       <h1 class="page_title">Vue-WeUI</h1>
       <p class="page_desc">为微信Web服务量身设计</p>

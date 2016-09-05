@@ -229,7 +229,7 @@ body {
     opacity: 0;
   }
 }
-.slide-enter,.slide-leave {
+/* .slide-enter,.slide-leave {
   position: absolute;
   top: 0;
   right: 0;
@@ -244,6 +244,23 @@ body {
 .slide-leave {
   -webkit-animation: b .25s forwards;
   animation: b .25s forwards;
+} */
+.slide-transition {
+  transition-duration: .3s;
+  width: 100%;
+}
+
+.slide-enter, .slide-leave {
+  transform: translate3d(100%, 0, 0);
+  overflow: hidden;
+}
+.app-transition {
+  -webkit-transition: opacity .3s ease;
+  transition: opacity .3s ease;
+}
+
+.app-enter, .app-leave {
+  opacity: 0;
 }
 
 </style>
