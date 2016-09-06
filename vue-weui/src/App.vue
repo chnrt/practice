@@ -181,86 +181,27 @@ body {
   background: url(./assets/weui/icon_nav_search_bar.png) no-repeat;
   background-size: 28px 28px;
 }
-@-webkit-keyframes a {
-  0% {
-    -webkit-transform: translate3d(100%,0,0);
-    transform: translate3d(100%,0,0);
-    opacity: 0;
-  }
-  to {
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    opacity: 1;
-  }
-}
-@keyframes a {
-  0% {
-    -webkit-transform: translate3d(100%,0,0);
-    transform: translate3d(100%,0,0);
-    opacity: 0;
-  }
-  to {
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    opacity: 1;
-  }
-}
-@-webkit-keyframes b {
-  0% {
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    opacity: 1;
-  }
-  to {
-    -webkit-transform: translate3d(100%,0,0);
-    transform: translate3d(100%,0,0);
-    opacity: 0;
-  }
-}
-@keyframes b {
-  0% {
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    opacity: 1;
-  }
-  to {
-    -webkit-transform: translate3d(100%,0,0);
-    transform: translate3d(100%,0,0);
-    opacity: 0;
-  }
-}
-/* .slide-enter,.slide-leave {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
+
+.slide-transition {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition: all .3s;
 }
 .slide-enter {
-  -webkit-animation: a .2s forwards;
-  animation: a .2s forwards;
+  opacity: 0;
+  transform: translate3d(70%, 0, 0);
 }
 .slide-leave {
-  -webkit-animation: b .25s forwards;
-  animation: b .25s forwards;
-} */
-.slide-transition {
-  transition-duration: .3s;
-  width: 100%;
-}
-
-.slide-enter, .slide-leave {
-  transform: translate3d(100%, 0, 0);
-  overflow: hidden;
-}
-.app-transition {
-  -webkit-transition: opacity .3s ease;
-  transition: opacity .3s ease;
-}
-
-.app-enter, .app-leave {
   opacity: 0;
+  transform: translate3d(-70%, 0, 0);
 }
 
+.transition-reverse .slide-enter {
+  opacity: 0;
+  transform: translate3d(-70%, 0, 0);
+}
+.transition-reverse .slide-leave {
+  opacity: 0;
+  transform: translate3d(70%, 0, 0);
+}
 </style>

@@ -14,6 +14,7 @@ import ProgressView from './views/ProgressView.vue';
 import SearchbarView from './views/SearchbarView.vue';
 import TabView from './views/TabView.vue';
 import ToastView from './views/ToastView.vue';
+import { sessionStorage } from './api/Storage';
 
 Vue.use(VueRouter);
 
@@ -94,3 +95,24 @@ router.redirect({
 });
 
 router.start(App, '#app');
+
+router.beforeEach(({ from, to, next }) => {
+  const toPath = to.path;
+  const fromPath = from.path;
+  const scrollTop = 100; // TODO
+  const h = sessionStorage.get(toPath);
+
+  if (h && h.history || (fromPath && fromPath.indexOf(toPath) === 0)) {
+    router.app.$el.className = 'transition-reverse';
+    h.history = false;
+    sessionStorage.set(toPath, h);
+  } else {
+    sessionStorage.set(fromPath, {
+      scrollTop,
+      history: true,
+    });
+
+    router.app.$el.className = '';
+  }
+  next();
+});
