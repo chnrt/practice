@@ -3,89 +3,28 @@
     <div class="hd">
       <h1 class="page_title">Cell</h1>
     </div>
+
     <div class="bd">
-      <div class="weui_cells_title">带说明的列表项</div>
-      <div class="weui_cells">
-        <div class="weui_cell">
-          <div class="weui_cell_bd weui_cell_primary">
-            <p>标题文字</p>
-          </div>
-          <div class="weui_cell_ft">说明文字</div>
-        </div>
-      </div>
-      <div class="weui_cells_title">带图标、说明的列表项</div>
-      <div class="weui_cells">
-        <div class="weui_cell">
-          <div class="weui_cell_hd">
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" alt="" style="width:20px;margin-right:5px;display:block"></div>
-          <div class="weui_cell_bd weui_cell_primary">
-            <p>标题文字</p>
-          </div>
-          <div class="weui_cell_ft">说明文字</div>
-        </div>
-        <div class="weui_cell">
-          <div class="weui_cell_hd">
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" alt="" style="width:20px;margin-right:5px;display:block"></div>
-          <div class="weui_cell_bd weui_cell_primary">
-            <p>标题文字</p>
-          </div>
-          <div class="weui_cell_ft">说明文字</div>
-        </div>
-      </div>
+      <group title="带说明的列表项">
+        <cell header="标题文字" value="说明文字"></cell>
+      </group>
 
-      <div class="weui_cells_title">带跳转的列表项</div>
-      <div class="weui_cells weui_cells_access">
-        <a class="weui_cell" href="javascript:;">
-          <div class="weui_cell_bd weui_cell_primary">
-            <p>cell standard</p>
-          </div>
-          <div class="weui_cell_ft"></div>
-        </a>
-        <a class="weui_cell" href="javascript:;">
-          <div class="weui_cell_bd weui_cell_primary">
-            <p>cell standard</p>
-          </div>
-          <div class="weui_cell_ft"></div>
-        </a>
-      </div>
+      <group title="带图标、说明的列表项">
+        <cell header="标题文字" value="说明文字">
+          <img slot="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" alt="" style="width:20px;margin-right:5px;display:block"/>
+        </cell>
+        <cell header="标题文字" value="说明文字">
+          <img slot="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" alt="" style="width:20px;margin-right:5px;display:block"/>
+        </cell>
+      </group>
 
-      <div class="weui_cells_title">带说明、跳转的列表项</div>
-      <div class="weui_cells weui_cells_access">
-        <a class="weui_cell" href="javascript:;">
-          <div class="weui_cell_bd weui_cell_primary">
-            <p>cell standard</p>
-          </div>
-          <div class="weui_cell_ft">说明文字</div>
-        </a>
-        <a class="weui_cell" href="javascript:;">
-          <div class="weui_cell_bd weui_cell_primary">
-            <p>cell standard</p>
-          </div>
-          <div class="weui_cell_ft">说明文字</div>
-        </a>
-
-      </div>
-
-      <div class="weui_cells_title">带图标、说明、跳转的列表项</div>
-      <div class="weui_cells weui_cells_access">
-
-        <a class="weui_cell" href="javascript:;">
-          <div class="weui_cell_hd">
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" alt="" style="width:20px;margin-right:5px;display:block"></div>
-          <div class="weui_cell_bd weui_cell_primary">
-            <p>cell standard</p>
-          </div>
-          <div class="weui_cell_ft">说明文字</div>
-        </a>
-        <a class="weui_cell" href="javascript:;">
-          <div class="weui_cell_hd">
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" alt="" style="width:20px;margin-right:5px;display:block"></div>
-          <div class="weui_cell_bd weui_cell_primary">
-            <p>cell standard</p>
-          </div>
-          <div class="weui_cell_ft">说明文字</div>
-        </a>
-      </div>
+      <group title="带跳转的列表项" :cells-style="linkStyle">
+        <cell header="cell standard" is-link></cell>
+        <cell header="cell standard" value="说明文字" is-link></cell>
+        <cell header="cell standard" value="说明文字" is-link>
+          <img slot="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" alt="" style="width:20px;margin-right:5px;display:block"/>
+        </cell>
+      </group>
 
       <div class="weui_cells_title">单选列表项</div>
       <div class="weui_cells weui_cells_radio">
@@ -296,7 +235,20 @@
 </template>
 
 <script>
-  export default {
+  import Group from '../components/group';
+  import Cell from '../components/cell';
 
+  export default {
+    components: {
+      Group,
+      Cell,
+    },
+    data() {
+      return {
+        linkStyle: {
+          weui_cells_access: true,
+        },
+      };
+    },
   };
 </script>
