@@ -26,6 +26,10 @@
         </cell>
       </group>
 
+      <group title="单选列表项" :cells-style="radioStyle">
+        <cell header="标题文字" value="说明文字"></cell>
+      </group>
+
       <div class="weui_cells_title">单选列表项</div>
       <div class="weui_cells weui_cells_radio">
         <label class="weui_cell weui_check_label" for="x11">
@@ -247,6 +251,12 @@
       return {
         linkStyle: {
           weui_cells_access: true,
+        },
+        radioStyle: {
+          weui_cells_radio: true,
+        },
+        checkboxStyle: {
+          weui_cells_checkbox: true,
         },
       };
     },
