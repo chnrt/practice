@@ -247,6 +247,7 @@
       Group,
       Cell,
     },
+
     data() {
       return {
         linkStyle: {
