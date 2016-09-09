@@ -1,5 +1,5 @@
 <template>
-  <div class="container js_container">
+  <div class="container js_container" :class="{ 'transition-reverse': reverse }">
     <router-view 
       keep-alive
       transition="slide">
@@ -9,27 +9,18 @@
 
 <script>
   import store from './vuex/store';
-  import {
-    setRouter,
-    deleteRouter,
-  } from './vuex/actions/actions';
 
   export default {
     store,
 
     vuex: {
       getters: {
-        router: state => state.router,
-      },
-
-      actions: {
-        setRouter,
-        deleteRouter,
+        reverse: state => state.reverse,
       },
     },
 
-    ready() {
-      // this.setRouter({ path: '/', history: false });
+    data() {
+      return {};
     },
   };
 </script>

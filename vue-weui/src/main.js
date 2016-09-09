@@ -32,13 +32,11 @@ router.beforeEach(({ from, to, next }) => {
   const h = routerData[toPath];
 
   if (h && h.history || (fromPath && fromPath.indexOf(toPath) === 0)) {
-    router.app.$el.className = 'transition-reverse';
-
+    dispatch('SET_REVERSE', true);
     dispatch('SET_ROUTER', { path: toPath, history: false });
   } else {
     dispatch('SET_ROUTER', { path: fromPath, history: true });
-
-    router.app.$el.className = '';
+    dispatch('SET_REVERSE', false);
   }
   next();
 });
