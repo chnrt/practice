@@ -2,7 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import App from './App';
 import routerMap from './router';
-import { sessionStorage } from './api/Storage';
+import store from './vuex/store';
 
 Vue.use(VueRouter);
 
@@ -19,21 +19,24 @@ router.redirect({
 
 router.start(App, '#app');
 
+/**
+ * use vuex to manager router history state
+ */
+const routerData = store.state.router || {};
+const dispatch = store.dispatch;
+
 router.beforeEach(({ from, to, next }) => {
   const toPath = to.path;
   const fromPath = from.path;
-  const scrollTop = 100; // TODO
-  const h = sessionStorage.get(toPath);
+  // const scrollTop = 100; // TODO
+  const h = routerData[toPath];
 
   if (h && h.history || (fromPath && fromPath.indexOf(toPath) === 0)) {
     router.app.$el.className = 'transition-reverse';
-    h.history = false;
-    sessionStorage.set(toPath, h);
+
+    dispatch('SET_ROUTER', { path: toPath, history: false });
   } else {
-    sessionStorage.set(fromPath, {
-      scrollTop,
-      history: true,
-    });
+    dispatch('SET_ROUTER', { path: fromPath, history: true });
 
     router.app.$el.className = '';
   }

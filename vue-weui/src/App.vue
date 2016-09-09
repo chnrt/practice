@@ -16,10 +16,12 @@
 
   export default {
     store,
+
     vuex: {
       getters: {
         router: state => state.router,
       },
+
       actions: {
         setRouter,
         deleteRouter,
@@ -27,7 +29,7 @@
     },
 
     ready() {
-      this.setRouter({ path: '/', history: false });
+      // this.setRouter({ path: '/', history: false });
     },
   };
 </script>
