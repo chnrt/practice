@@ -1,5 +1,5 @@
 <template>
-  <a class="weui_cell" v-if="isLink">
+  <a class="weui_cell" v-if="isLink" @click="clickFun">
     <div class="weui_cell_hd">
       <slot name="icon"></slot>
     </div>
@@ -30,6 +30,12 @@
       isLink: Boolean,
       header: String,
       value: String,
+      clickFun: {
+        type: Function,
+        default() {
+          void(0);
+        },
+      },
     },
   };
 </script>
