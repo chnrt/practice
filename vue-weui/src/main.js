@@ -3,6 +3,10 @@ import VueRouter from 'vue-router';
 import App from './App';
 import routerMap from './router';
 import store from './vuex/store';
+import {
+  setRouter,
+  setReverse,
+} from './vuex/actions/actions';
 
 Vue.use(VueRouter);
 
@@ -23,7 +27,7 @@ router.start(App, '#app');
  * use vuex to manager router history state
  */
 const routerData = store.state.router || {};
-const dispatch = store.dispatch;
+// const dispatch = store.dispatch;
 
 router.beforeEach(({ from, to, next }) => {
   const toPath = to.path;
@@ -32,11 +36,11 @@ router.beforeEach(({ from, to, next }) => {
   const h = routerData[toPath];
 
   if (h && h.history || (fromPath && fromPath.indexOf(toPath) === 0)) {
-    dispatch('SET_REVERSE', true);
-    dispatch('SET_ROUTER', { path: toPath, history: false });
+    setReverse(store, true);
+    setRouter(store, { path: toPath, history: false });
   } else {
-    dispatch('SET_ROUTER', { path: fromPath, history: true });
-    dispatch('SET_REVERSE', false);
+    setRouter(store, { path: fromPath, history: true });
+    setReverse(store, false);
   }
   next();
 });
