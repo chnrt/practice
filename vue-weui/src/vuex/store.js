@@ -4,6 +4,7 @@ import {
   SET_ROUTER,
   DELETE_ROUTER,
   SET_REVERSE,
+  SET_SCROLL_TOP,
 } from './mutations_type';
 
 Vue.use(Vuex);
@@ -16,7 +17,8 @@ const state = {
 /* eslint-disable no-param-reassign */
 const mutations = {
   [SET_ROUTER](states, { path, history }) {
-    states.router[path] = { history };
+    states.router[path] = states.router[path] || {};
+    states.router[path].history = history;
   },
 
   [DELETE_ROUTER](states, { path }) {
@@ -25,6 +27,11 @@ const mutations = {
 
   [SET_REVERSE](states, reverse) {
     states.reverse = reverse;
+  },
+
+  [SET_SCROLL_TOP](states, { path, scrollTop }) {
+    states.router[path] = states.router[path] || {};
+    states.router[path].scrollTop = scrollTop;
   },
 };
 

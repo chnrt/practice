@@ -264,7 +264,6 @@
 
     methods: {
       showTip() {
-        window.alert(123);
       },
     },
   };
