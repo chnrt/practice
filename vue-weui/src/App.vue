@@ -1,5 +1,7 @@
 <template>
-  <div class="container js_container" :class="{ 'transition-reverse': reverse }">
+  <div 
+    class="container js_container" 
+    :class="{ 'transition-reverse': reverse }">
     <router-view 
       keep-alive
       transition="slide">
@@ -17,10 +19,6 @@
       getters: {
         reverse: state => state.reverse,
       },
-    },
-
-    data() {
-      return {};
     },
   };
 </script>
