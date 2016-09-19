@@ -16,6 +16,16 @@ const router = new VueRouter({
   }, {
     path: '/test',
     component: Hello,
+  }, {
+    path: '/render',
+    component: {
+      render(h) {
+        return h('div', [
+          h('p', 'hi'),
+          'render test',
+        ]);
+      },
+    },
   }],
 });
 
