@@ -6,10 +6,9 @@ import Hello from 'components/Hello';
 Vue.use(VueRouter);
 
 const router = new VueRouter({
+  base: __dirname,
+  mode: 'history',
   routes: [{
-    path: '/',
-    component: App,
-  }, {
     path: '/test',
     component: Hello,
   }],
@@ -17,8 +16,6 @@ const router = new VueRouter({
 
 /* eslint-disable no-new */
 new Vue({
-  render(createElement) {
-    return createElement('router-view');
-  },
+  render: h => h(App),
   router,
 }).$mount('#app');
