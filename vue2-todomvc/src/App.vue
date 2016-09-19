@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <img class="logo" src="./assets/logo.png">
+    <router-link to="/test">Go to Test</router-link>
     <!-- <hello></hello> -->
     <p>
       Welcome to your Vue.js app!
